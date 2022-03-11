@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        style="style/titreappmain"
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="20dp"
+        android:text="@string/superapptitre"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="mafagactivity"
+        />
+
+    <Button
+        style="@style/buttonmafag"
+        android:id="@+id/button"
+        android:text="@string/choisir_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/marque"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/site_de_marque"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        />
+
+    <Button
+        style="@style/buttonmafag"
+        android:id="@+id/button2"
+        android:text="@string/magfag_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        />
+
+</LinearLayout>

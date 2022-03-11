@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">travail_bloc_D</string>
+    <string name="choisir_button">Faire un choix</string>
+    <string name="magfag_button">Ouvrir le MAFAG</string>
+    <string name="superapptitre">Super application MAFAG</string>
+    <string name="marque">Faite votre choix</string>
+    <string name="site_de_marque"> </string>
+</resources>

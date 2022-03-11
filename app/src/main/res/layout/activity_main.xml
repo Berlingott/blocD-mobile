@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        style="@style/buttonmafag"
+        android:id="@+id/textView"
+        android:text="@string/superapptitre"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        style="@style/buttonmafag"
+        android:id="@+id/button"
+        android:text="@string/choisir_button"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="MissingConstraints"
+        android:onClick="mafagactivity"
+        />
+
+    <TextView
+        style="@style/buttonmafag"
+        android:id="@+id/textViewMarque"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        style="@style/buttonmafag"
+        android:id="@+id/textViewSite"
+        android:text="@string/site_de_marque"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMarque"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        style="@style/buttonmafag"
+        android:id="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSite"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>
