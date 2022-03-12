@@ -66,3 +66,9 @@ public class NotificationActivity extends ContextWrapper {
 
 
 
+
+
+// Fonction de notification et icone de  https://github.com/trulymittal/Notifications
+
+
+
