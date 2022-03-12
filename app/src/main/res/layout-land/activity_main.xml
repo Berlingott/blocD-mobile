@@ -55,11 +55,12 @@
             />
 
         <Button
-            android:onClick="openLink"
+
             style="@style/buttonmafag"
             android:id="@+id/button2"
             android:text="@string/magfag_button_notification"
-            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/notificationBtn"
+            android:onClick="sendNotification"
             />
 
     </LinearLayout>

@@ -6,6 +6,8 @@
     android:layout_height="match_parent">
 
     <ImageButton
+        android:onClick="facebookSelected"
+
         android:id="@+id/imageButton4"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -18,6 +20,8 @@
         />
 
     <ImageButton
+        android:onClick="amazonSelected"
+
         android:id="@+id/imageButton5"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -29,6 +33,8 @@
         app:srcCompat="@drawable/amazon" />
 
     <ImageButton
+        android:onClick="googleSelected"
+
         android:id="@+id/imageButton6"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -40,6 +46,8 @@
         app:srcCompat="@drawable/google" />
 
     <ImageButton
+        android:onClick="appleSelected"
+
         android:id="@+id/imageButton7"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -51,6 +59,8 @@
         app:srcCompat="@drawable/apple" />
 
     <ImageButton
+        android:onClick="windowsSelected"
+
         android:id="@+id/imageButton8"
         android:layout_width="100dp"
         android:layout_height="100dp"

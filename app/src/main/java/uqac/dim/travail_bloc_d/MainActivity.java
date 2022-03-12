@@ -16,7 +16,10 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
+
+
     static final int CODEMARQUE = 1; //REQUEST CODE
+    NotificationActivity notificationactivity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         TextView textViewMarque = findViewById(R.id.textViewMarque);
         textViewMarque.setText("Veuillez faire un choix.");
         textViewSite.setText("Veuillez faire un choix.");
+        notificationactivity = new NotificationActivity(this);
+
     }
 
 
@@ -37,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CODEMARQUE) {
             if (resultCode == RESULT_OK) {
                 TextView textViewMarque = findViewById(R.id.textViewMarque);
@@ -44,13 +50,21 @@ public class MainActivity extends AppCompatActivity {
                 TextView textViewSite = findViewById(R.id.textViewSite);
                 textViewSite.setText(data.getStringExtra("website"));
                 site = data.getStringExtra("website");
+                marque = data.getStringExtra("marque");
+
             }
         }
     }
     static String site;
+    static String marque;
     public void openLink(View v){
         Uri webpage = Uri.parse(site);
         Intent webIntent = new Intent(Intent.ACTION_VIEW, webpage);
         startActivity(webIntent);
     }
-}
+
+    public void sendNotification(View v) {
+        notificationactivity.sendHighPriorityNotification(site, marque, MainActivity.class);
+
+    }
+};
