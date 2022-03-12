@@ -1,47 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+    <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
+        <TextView
+            style="style/titreappmain"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:paddingHorizontal="20dp"
+            android:text="@string/superapptitre"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="mafagactivity"
+            />
 
-        style="@style/buttonmafag"
-        android:id="@+id/textView"
-        android:text="@string/superapptitre"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:onClick="mafagactivity"
+            style="@style/buttonmafag"
+            android:id="@+id/button"
+            android:text="@string/choisir_button"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:background="@android:color/darker_gray"/>
 
 
-    <Button
-        style="@style/buttonmafag"
-        android:id="@+id/button"
-        android:text="@string/choisir_button"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        tools:ignore="MissingConstraints"
-        android:onClick="mafagactivity"
 
-        />
+        <TextView
+            android:id="@+id/textViewMarque"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/marque"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            />
 
-    <TextView
-        style="@style/buttonmafag"
-        android:id="@+id/textViewMarque"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        tools:ignore="MissingConstraints" />
+        <TextView
+            android:id="@+id/textViewSite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/site_de_marque"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            />
 
-    <TextView
-        style="@style/buttonmafag"
-        android:id="@+id/textViewSite"
-        android:text="@string/site_de_marque"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMarque"
-        tools:ignore="MissingConstraints" />
+        <Button
+            android:onClick="openLink"
+            style="@style/buttonmafag"
+            android:id="@+id/button2"
+            android:text="@string/magfag_button"
+            app:layout_constraintTop_toBottomOf="@+id/textView3"
+            />
 
-    <Button
-        style="@style/buttonmafag"
-        android:id="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textViewSite"
-        tools:ignore="MissingConstraints" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
